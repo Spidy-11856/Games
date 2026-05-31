@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bihar Streets: Open-World Prototype</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell" aria-label="Bihar Streets playable prototype">
+      <canvas id="game" width="1280" height="720" aria-label="Bihar Streets game canvas"></canvas>
+
+      <section class="poster-card" aria-label="Game title and controls">
+        <p class="eyebrow">Original Bihar 3D chase-cam prototype</p>
+        <h1>Bihar<br />Streets</h1>
+        <p class="tagline">Third-person Bihar streets, ghats, junction roads, fairgrounds, and local delivery runs.</p>
+        <div class="control-grid" aria-label="Controls">
+          <span><kbd>W/S</kbd> Walk / reverse</span>
+          <span><kbd>A/D</kbd> Turn camera</span>
+          <span><kbd>Shift</kbd> Sprint / accelerate</span>
+          <span><kbd>E</kbd> Auto-rickshaw</span>
+          <span><kbd>Space</kbd> Mission</span>
+          <span><kbd>M</kbd> Mini-map</span>
+        </div>
+      </section>
+
+      <aside class="game-hud" aria-live="polite">
+        <div class="weapon-icon" aria-label="Player icon">✊</div>
+        <div class="hud-stack">
+          <strong id="clock" class="clock">06:00</strong>
+          <strong id="respectScore" class="money">₹000000</strong>
+          <div class="meter health"><span></span></div>
+          <div class="meter stamina"><span id="staminaMeter"></span></div>
+          <div id="wantedStars" class="wanted" aria-label="Heat level">☆ ☆ ☆ ☆ ☆</div>
+        </div>
+      </aside>
+
+      <section class="mission-banner" aria-label="Current mission">
+        <div>
+          <span id="areaName">Ganga Ghat</span>
+          <strong id="missionText">Find a marker</strong>
+        </div>
+        <em id="vehicleState">On foot</em>
+      </section>
+
+      <div class="prompt-card" id="prompt">Walk to a glowing marker and press Space.</div>
+
+      <section class="legal-note" aria-label="Originality note">
+        Original 3D-style homage UI and artwork. No commercial game assets, maps, code, branding, or characters are copied.
+      </section>
+    </main>
+
+    <script type="module" src="src/game.js"></script>
+  </body>
+</html>
